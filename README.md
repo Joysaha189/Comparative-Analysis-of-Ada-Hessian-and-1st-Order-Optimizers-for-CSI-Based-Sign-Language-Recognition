@@ -2,7 +2,7 @@
 
 
 
-This repository contains the implementation and experimental analysis of **Ada-Hessian**, a second-order optimization method, compared against several **first-order optimizers** for **CSI-based sign language recognition**.
+This repository contains the implementation and experimental analysis of ***Ada-Hessian***, a second-order optimization method, compared against several **first-order optimizers** for **CSI-based sign language recognition**.
 
 The project was completed for \*\*AMAT 591: Optimization Methods and Nonlinear Programming (Spring 2025)\*\* at the \*\*University at Albany\*\*.
 
@@ -14,7 +14,7 @@ The project was completed for \*\*AMAT 591: Optimization Methods and Nonlinear P
 
 
 
-First-order optimizers such as SGD and Adam dominate deep learning due to their efficiency but are often highly sensitive to hyperparameter choices. This project investigates whether incorporating \*\*second-order curvature information\*\* via \*\*Ada-Hessian\*\* can improve convergence speed, stability, and robustness when training neural networks on \*\*WiFi CSI-based sign language data\*\*.
+First-order optimizers such as SGD and Adam dominate deep learning due to their efficiency but are often highly sensitive to hyperparameter choices. This project investigates whether incorporating \*\*second-order curvature information\*\* via ***Ada-Hessian*** can improve convergence speed, stability, and robustness when training neural networks on **WiFi CSI-based sign language data**.
 
 
 
@@ -22,67 +22,54 @@ First-order optimizers such as SGD and Adam dominate deep learning due to their 
 
 
 
-\* An implementation of \*\*Ada-Hessian using Hutchinson’s method\*\* for Hessian diagonal approximation
-
-\* \*\*Spatial (block-wise) averaging\*\* to reduce stochastic curvature noise
-
-\* Extensive comparison with \*\*SGD, Adam, AdamW, Adamax, Nadam, and RMSprop\*\*
-
-\* Evaluation on multiple CSI datasets, including single-user and multi-user settings
+* An implementation of **Ada-Hessian using Hutchinson’s method** for Hessian diagonal approximation
+* **Spatial (block-wise) averaging** to reduce stochastic curvature noise
+* Extensive comparison with **SGD, Adam, AdamW, Adamax, Nadam, and RMSprop**.
+* Evaluation on multiple CSI datasets, including single-user and multi-user settings
 
 
 
 
 
-\## 📁 Repository Structure
+###### &nbsp;📁 Repository Structure
 
 
 
 ```
 
-├── code/
+├── Code/
 
-│   ├── models/                # CNN-based architectures for CSI classification
-
-│   ├── optimizers/            # Ada-Hessian and first-order optimizer implementations
-
-│   ├── training/              # Training and evaluation scripts
-
-│   └── utils/                 # Helper functions and preprocessing utilities
+│   ├── adahessian\_sample\_usage          # Sample code for demonstration.
 
 │
 
-├── data/
+├── Data/
 
-│   └── Home/            # Subset of the Home CSI dataset (for demonstration)
+│   └── Home/                            # Subset of the Home CSI dataset (for demonstration)
 
 │
 
-├── results/
+├── Results/
 
-│   ├── plots/                  # Training/validation curves
-
-│   ├── logs/                   # Experiment logs for all configurations
-
-│   └── tables/                 # Accuracy and performance comparison tables
+│   ├── plots/                           # Training/validation curves
 
 │
 
 ├── deliverables/
 
-│   ├── project\_report.pdf      # Final project report
+│   ├── Project Report.pdf               # Final project report
 
-│   ├── project\_proposal.pdf    # Initial project proposal
+│   ├── AMAT\_591\_Project\_Proposal.pdf    # Initial project proposal
 
-│   └── poster.pdf              # Project poster
+│   └── Poster\_Joy.pdf                   # Project poster
 
 │
 
-├── materials/
+├── Materials/
 
-│   ├── signfi\_paper.pdf        # SignFi dataset reference paper
+│   ├── signfi\_paper.pdf                 # Sign-Fi dataset reference paper
 
-│   └── adahessian\_paper.pdf    # Ada-Hessian original paper
+│   └── adahessian\_paper.pdf             # Ada-Hessian original paper
 
 │
 
@@ -91,8 +78,6 @@ First-order optimizers such as SGD and Adam dominate deep learning due to their 
 ```
 
 
-
----
 
 
 
@@ -115,8 +100,6 @@ The learning objective is to minimize a non-convex empirical risk function:
 While first-order methods rely only on gradient statistics, \*\*Ada-Hessian preconditions gradients using an approximate inverse Hessian\*\*, enabling curvature-aware updates that adapt to the geometry of the loss surface.
 
 
-
----
 
 
 
@@ -252,7 +235,7 @@ Detailed results for \*\*all configurations\*\* (learning rates, Hessian power v
 
 
 
-\* Ada-Hessian is a \*\*robust and efficient optimizer\*\* for CSI-based sign language recognition
+\* Ada-Hessian is a robust and efficient optimizer for CSI-based sign language recognition
 
 \* Less sensitive to learning rate selection than first-order methods
 
@@ -305,6 +288,130 @@ If you want, I can next:
 \* Create a \*\*minimal README\*\* version for public release
 
 \* Help you write a \*\*GitHub release description or project tagline\*\*
+
+
+
+\#### Project Status
+
+
+
+
+
+
+
+!\[results](Images/final\\\_results.png)
+
+
+
+
+
+
+
+✅ Completed — Baseline implementation
+
+
+
+
+
+
+
+🔧 Open for enhancements and upgrades
+
+
+
+
+
+
+
+
+
+
+
+\###### \*\*Acknowledgements\*\*
+
+
+
+
+
+
+
+Special thanks to \*\*Dr. Hafiz Imtiaz\*\* and \*\*Dr. Tahsina Farah Sanam\*\* for their valuable guidance and support throughout this project. And this project is Implemented from the dataset and method provided in \[SignFi](https://yongsen.github.io/SignFi/) Paper.
+
+
+
+
+
+
+
+\###### \*\*Author\*\*
+
+
+
+
+
+
+
+\*\*Joy Saha\*\*
+
+
+
+Bangladesh University of Engineering and Technology (BUET)
+
+
+
+
+
+
+
+
+
+
+
+\###### \*\*References\*\*
+
+
+
+
+
+
+
+Y. Ma, G. Zhou, S. Wang, H. Zhao, and W. Jung, “Signfi: Sign language recog
+
+
+
+nition using wifi,” Proceedings of the ACM on Interactive, Mobile, Wearable 
+
+
+
+and Ubiquitous Technologies, vol. 2, no. 1, pp. 1–21, 2018.
+
+
+
+
+
+
+
+
+
+\#### \*\*License\*\*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+This project is for academic and educational purposes.
+
+
 
 
 
