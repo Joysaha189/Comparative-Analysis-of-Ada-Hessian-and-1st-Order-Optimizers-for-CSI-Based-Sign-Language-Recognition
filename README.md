@@ -55,7 +55,7 @@ First-order optimizers such as SGD and Adam dominate deep learning due to their 
 
 │
 
-├── deliverables/
+├── Deliverables/
 
 │   ├── Project Report.pdf               # Final project report
 
