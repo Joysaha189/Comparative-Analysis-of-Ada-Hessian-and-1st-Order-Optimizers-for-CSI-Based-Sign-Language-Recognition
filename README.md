@@ -91,7 +91,7 @@ The learning objective is to minimize a non-convex empirical risk function:
 
 $$
 
-\\min\_{\\theta} ; L(\\theta) = \\frac{1}{N}\\sum\_{i=1}^{N} \\ell(x\_i, y\_i; \\theta)
+\min\_{\theta} ; L(\\theta) = \frac{1}{N}\\sum\_{i=1}^{N} \ell(x\_i, y\_i; \theta)
 
 $$
 
