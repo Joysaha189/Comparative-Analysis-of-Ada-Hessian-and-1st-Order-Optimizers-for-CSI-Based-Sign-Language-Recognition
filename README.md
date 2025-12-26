@@ -133,11 +133,11 @@ While first-order methods rely only on gradient statistics, \*\*Ada-Hessian prec
 
 
 
-\## 📊 Experimental Setup
+📊 Experimental Setup
 
 
 
-\### CSI Datasets
+CSI Datasets
 
 
 
