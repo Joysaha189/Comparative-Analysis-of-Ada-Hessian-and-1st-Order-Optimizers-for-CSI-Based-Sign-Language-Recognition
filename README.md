@@ -14,7 +14,7 @@ The project was completed for **AMAT 591: Optimization Methods and Nonlinear Pro
 
 
 
-First-order optimizers such as SGD and Adam dominate deep learning due to their efficiency but are often highly sensitive to hyperparameter choices. This project investigates whether incorporating \*\*second-order curvature information\*\* via ***Ada-Hessian*** can improve convergence speed, stability, and robustness when training neural networks on **WiFi CSI-based sign language data**.
+First-order optimizers such as SGD and Adam dominate deep learning due to their efficiency but are often highly sensitive to hyperparameter choices. This project investigates whether incorporating **second-order curvature information** via ***Ada-Hessian*** can improve convergence speed, stability, and robustness when training neural networks on **WiFi CSI-based sign language data**.
 
 
 
