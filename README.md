@@ -97,7 +97,7 @@ $$
 
 
 
-!\[adhessian](Images/trajectory.png)
+![adhessian](Images/trajectory.png)
 
 
 
@@ -126,7 +126,7 @@ While first-order methods rely only on gradient statistics, Ada-Hessian precondi
 
 
 
-!\[cnn](Images/cnn.png)
+![cnn](Images/cnn.png)
 
 
 
@@ -200,7 +200,7 @@ CSI Datasets
 4. Performance is competitive with AdamW, the strongest first-order baseline
 5. 
 
-!\[results](Images/results.png)
+![results](Images/results.png)
 
 
 
