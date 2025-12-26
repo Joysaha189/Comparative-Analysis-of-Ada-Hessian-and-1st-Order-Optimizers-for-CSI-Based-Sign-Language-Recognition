@@ -81,7 +81,7 @@ First-order optimizers such as SGD and Adam dominate deep learning due to their 
 
 
 
-\## 🧠 Problem Formulation
+###### **🧠 Problem Formulation**
 
 
 
@@ -89,15 +89,19 @@ The learning objective is to minimize a non-convex empirical risk function:
 
 
 
-\[
+$$
 
 \\min\_{\\theta} ; L(\\theta) = \\frac{1}{N}\\sum\_{i=1}^{N} \\ell(x\_i, y\_i; \\theta)
 
-]
+$$
 
 
 
-While first-order methods rely only on gradient statistics, \*\*Ada-Hessian preconditions gradients using an approximate inverse Hessian\*\*, enabling curvature-aware updates that adapt to the geometry of the loss surface.
+!\[adhessian](Images/trajectory.jpg)
+
+
+
+While first-order methods rely only on gradient statistics, Ada-Hessian preconditions gradients using an approximate inverse Hessian, enabling curvature-aware updates that adapt to the geometry of the loss surface.
 
 
 
@@ -119,6 +123,10 @@ While first-order methods rely only on gradient statistics, \*\*Ada-Hessian prec
 
 
 **Neural Network Architecture**
+
+
+
+!\[cnn](Images/cnn.jpg)
 
 
 
@@ -190,6 +198,9 @@ CSI Datasets
 2. Demonstrates smooth and stable training behavior
 3. Achieves highest validation accuracy on the Lab dataset
 4. Performance is competitive with AdamW, the strongest first-order baseline
+5. 
+
+!\[results](Images/results.jpg)
 
 
 
@@ -226,19 +237,11 @@ Detailed results for all configurations (learning rates, Hessian power values, w
 
 
 
-1.Yongsen Ma, Gang Zhou, Shuangquan Wang, Hongyang Zhao, and Woosub Jung.
-
-Signfi: Sign language recognition using wifi. Proc. ACM Interact. Mob. Wearable
-
-Ubiquitous Technol., 2(1):Article 23, 21 pages, March 2018.
+1.Yongsen Ma, Gang Zhou, Shuangquan Wang, Hongyang Zhao, and Woosub Jung. Signfi: Sign language recognition using wifi. Proc. ACM Interact. Mob. Wearable Ubiquitous Technol., 2(1):Article 23, 21 pages, March 2018.
 
 
 
-2\. Zhewei Yao, Amir Gholami, Sheng Shen, Kurt Keutzer, and Michael W. Mahoney.
-
-Adahessian: An adaptive second order optimizer for machine learning. AAAI (Ac-
-
-cepted), 2021.
+2\. Zhewei Yao, Amir Gholami, Sheng Shen, Kurt Keutzer, and Michael W. Mahoney. Adahessian: An adaptive second order optimizer for machine learning. AAAI (Accepted), 2021.
 
 
 
@@ -272,17 +275,19 @@ cepted), 2021.
 
 
 
-
-
-Special thanks to \*\*Dr. Hafiz Imtiaz\*\* and \*\*Dr. Tahsina Farah Sanam\*\* for their valuable guidance and support throughout this project. And this project is Implemented from the dataset and method provided in \[SignFi](https://yongsen.github.io/SignFi/) Paper.
-
+The initial components of this project, including CSI data preprocessing and baseline pipeline development, were carried out during my undergraduate research. Details of that work can be found at [here](https://github.com/Joysaha189/Implementation-Friendly-CNN-For-Sign-Language-Recognition-Using-Wi-Fi-CSI-Data).
 
 
 
+I sincerely thank my undergraduate supervisors, Dr. Hafiz Imtiaz and Dr. Tahsina Farah Sanam, for their guidance and foundational contributions, which made this work possible.
 
 
 
-\###### \*\*Author\*\*
+The Ada-Hessian optimizer implementation in this project is adapted from the original [AdaHessian](https://github.com/amirgholami/adahessian) paper and its publicly available resources . The dataset and baseline model architecture are based on the SignFi framework ([https://yongsen.github.io/SignFi/](https://yongsen.github.io/SignFi/)).
+
+
+
+I am also grateful to Dr. Zi Yang for his valuable guidance and feedback throughout the completion of this project as part of AMAT 591.
 
 
 
@@ -290,7 +295,17 @@ Special thanks to \*\*Dr. Hafiz Imtiaz\*\* and \*\*Dr. Tahsina Farah Sanam\*\* f
 
 
 
-\*\*Joy Saha\*\*
+
+
+#### **Author**
+
+
+
+
+
+
+
+**Joy Saha**
 
 
 
@@ -308,7 +323,7 @@ University at Albany, SUNY
 
 
 
-\#### \*\*License\*\*
+#### **License**
 
 
 
