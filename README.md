@@ -4,7 +4,7 @@
 
 This repository contains the implementation and experimental analysis of ***Ada-Hessian***, a second-order optimization method, compared against several **first-order optimizers** for **CSI-based sign language recognition**.
 
-The project was completed for \*\*AMAT 591: Optimization Methods and Nonlinear Programming (Spring 2025)\*\* at the \*\*University at Albany\*\*.
+The project was completed for **AMAT 591: Optimization Methods and Nonlinear Programming (Spring 2025)** at the **University at Albany**.
 
 
 
@@ -103,39 +103,33 @@ While first-order methods rely only on gradient statistics, \*\*Ada-Hessian prec
 
 
 
-\## ⚙️ Methodology
+###### ⚙️ Methodology
 
 
 
-\### Ada-Hessian Key Components
+**Ada-Hessian Key Components**
 
 
 
-\* \*\*Hessian diagonal approximation\*\* via Hutchinson’s method
-
-\* \*\*Block-wise spatial averaging\*\* of curvature estimates
-
-\* \*\*Momentum-based smoothing\*\*, similar to Adam
-
-\* Tunable \*\*Hessian power parameter (k)\*\* to interpolate between gradient descent and Newton-like behavior
+* &nbsp;Hessian diagonal approximation via Hutchinson’s method
+* &nbsp;Block-wise spatial averaging of curvature estimates
+* &nbsp;Momentum-based smoothing, similar to Adam
+* Tunable Hessian power parameter (k) to interpolate between gradient descent and Newton-like behavior
 
 
 
-\### Neural Network Architecture
+**Neural Network Architecture**
 
 
 
-\* CNN-based classifier for CSI tensors of shape `(200 × 60 × 3)`
-
-\* Convolution + BatchNorm + ReLU
-
-\* Average pooling and dropout
-
-\* Fully connected layer with softmax activation
+* CNN-based classifier for CSI tensors of shape `(200 × 60 × 3)`
+* Convolution + BatchNorm + ReLU
+* Average pooling and dropout
+* Fully connected layer with softmax activation
 
 
 
----
+
 
 
 
@@ -159,79 +153,65 @@ While first-order methods rely only on gradient statistics, \*\*Ada-Hessian prec
 
 
 
-> ⚠️ Due to size constraints, \*\*only a subset of the Home dataset\*\* is included in this repository under `data/`.
+> ⚠️ Due to size constraints, only a subset of the Home dataset is included in this repository under `Data/`.
 
 
 
----
 
 
 
-\### Training Configuration
+
+**Training Configuration**
 
 
 
-\* Batch size: 256
+* &nbsp;Batch size: 256
+* &nbsp;Epochs: up to 300 (Ada-Hessian typically converges within ~50 epochs)
+* &nbsp;Weight decay: (5 \\times 10^{-4})
+* &nbsp;Learning rate:
 
-\* Epochs: up to 300 (Ada-Hessian typically converges within ~50 epochs)
+&nbsp;                First-order optimizers: 0.01
 
-\* Weight decay: (5 \\times 10^{-4})
+&nbsp;                Ada-Hessian: 0.15
 
-\* Learning rate:
-
-
-
-&nbsp; \* First-order optimizers: 0.01
-
-&nbsp; \* Ada-Hessian: 0.15
-
-\* Learning rate decay at epochs 80, 160, and 240
+* \* Learning rate decay at epochs 80, 160, and 240
 
 
 
----
+
+
+###### 
+
+###### **📈 Results Summary**
 
 
 
-\## 📈 Results Summary
+1. Ada-Hessian converges significantly faster than first-order optimizers
+2. Demonstrates smooth and stable training behavior
+3. Achieves highest validation accuracy on the Lab dataset
+4. Performance is competitive with AdamW, the strongest first-order baseline
 
 
 
-\* \*\*Ada-Hessian converges significantly faster\*\* than first-order optimizers
-
-\* Demonstrates \*\*smooth and stable training behavior\*\*
-
-\* Achieves \*\*highest validation accuracy on the Lab dataset\*\*
-
-\* Performance is competitive with \*\*AdamW\*\*, the strongest first-order baseline
+Detailed results for all configurations (learning rates, Hessian power values, weight decay settings) are available in the `Results/` directory.
 
 
 
-Detailed results for \*\*all configurations\*\* (learning rates, Hessian power values, weight decay settings) are available in the `results/` directory.
+
+
+###### **⏱️ Computational Trade-offs**
 
 
 
----
+\* Ada-Hessian incurs 3–5× higher training time due to Hessian estimation
+
+\* However, it **requires far fewer epochs to converge**, reducing tuning effort
+
+\* Particularly effective in high-variability and multi-user CSI settings
 
 
 
-\## ⏱️ Computational Trade-offs
-
-
-
-\* Ada-Hessian incurs \*\*3–5× higher training time\*\* due to Hessian estimation
-
-\* However, it \*\*requires far fewer epochs to converge\*\*, reducing tuning effort
-
-\* Particularly effective in \*\*high-variability and multi-user CSI settings\*\*
-
-
-
----
-
-
-
-\## ✅ Conclusions
+###### **✅ Conclusions**
 
 
 
@@ -245,73 +225,37 @@ Detailed results for \*\*all configurations\*\* (learning rates, Hessian power v
 
 
 
----
+
+
+###### 📚 References
 
 
 
-\## 📚 References
+1.Yongsen Ma, Gang Zhou, Shuangquan Wang, Hongyang Zhao, and Woosub Jung.
+
+Signfi: Sign language recognition using wifi. Proc. ACM Interact. Mob. Wearable
+
+Ubiquitous Technol., 2(1):Article 23, 21 pages, March 2018.
 
 
 
-1\. \*\*Ma et al.\*\* \*SignFi: Sign Language Recognition Using WiFi\*. ACM IMWUT, 2018.
+2\. Zhewei Yao, Amir Gholami, Sheng Shen, Kurt Keutzer, and Michael W. Mahoney.
 
-2\. \*\*Yao et al.\*\* \*AdaHessian: An Adaptive Second Order Optimizer for Machine Learning\*. AAAI, 2021.
+Adahessian: An adaptive second order optimizer for machine learning. AAAI (Ac-
 
-
-
----
-
-
-
-\## 🙏 Acknowledgments
-
-
-
-\* SignFi dataset and prior CSI-based sign language recognition research
-
-\* \*\*Dr. Zi Yang\*\*, AMAT 591
-
-\* \*\*Dr. Hafiz Imtiaz\*\* and \*\*Dr. Tahsina Farah Sanam\*\* for earlier guidance during undergraduate research
-
-
-
----
-
-
-
-If you want, I can next:
-
-
-
-\* Add a \*\*Quick Start / How to Run\*\* section
-
-\* Create a \*\*minimal README\*\* version for public release
-
-\* Help you write a \*\*GitHub release description or project tagline\*\*
-
-
-
-\#### Project Status
+cepted), 2021.
 
 
 
 
 
-
-
-!\[results](Images/final\\\_results.png)
-
-
+###### **Project Status**
 
 
 
 
 
 ✅ Completed — Baseline implementation
-
-
-
-
 
 
 
@@ -327,7 +271,7 @@ If you want, I can next:
 
 
 
-\###### \*\*Acknowledgements\*\*
+###### **Acknowledgements**
 
 
 
@@ -355,45 +299,8 @@ Special thanks to \*\*Dr. Hafiz Imtiaz\*\* and \*\*Dr. Tahsina Farah Sanam\*\* f
 
 
 
-Bangladesh University of Engineering and Technology (BUET)
+University at Albany, SUNY
 
-
-
-
-
-
-
-
-
-
-
-\###### \*\*References\*\*
-
-
-
-
-
-
-
-Y. Ma, G. Zhou, S. Wang, H. Zhao, and W. Jung, “Signfi: Sign language recog
-
-
-
-nition using wifi,” Proceedings of the ACM on Interactive, Mobile, Wearable 
-
-
-
-and Ubiquitous Technologies, vol. 2, no. 1, pp. 1–21, 2018.
-
-
-
-
-
-
-
-
-
-\#### \*\*License\*\*
 
 
 
@@ -406,6 +313,7 @@ and Ubiquitous Technologies, vol. 2, no. 1, pp. 1–21, 2018.
 
 
 
+\#### \*\*License\*\*
 
 
 
