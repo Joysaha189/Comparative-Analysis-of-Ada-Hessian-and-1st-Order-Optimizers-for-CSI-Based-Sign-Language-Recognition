@@ -174,7 +174,7 @@ CSI Datasets
 
 &nbsp;                Ada-Hessian: 0.15
 
-* \* Learning rate decay at epochs 80, 160, and 240
+* Learning rate decay at epochs 80, 160, and 240
 
 
 
@@ -203,11 +203,9 @@ Detailed results for all configurations (learning rates, Hessian power values, w
 
 
 
-\* Ada-Hessian incurs 3–5× higher training time due to Hessian estimation
-
-\* However, it **requires far fewer epochs to converge**, reducing tuning effort
-
-\* Particularly effective in high-variability and multi-user CSI settings
+1. Ada-Hessian incurs 3–5× higher training time due to Hessian estimation
+2. However, it **requires far fewer epochs to converge**, reducing tuning effort
+3. Particularly effective in high-variability and multi-user CSI settings
 
 
 
@@ -215,13 +213,10 @@ Detailed results for all configurations (learning rates, Hessian power values, w
 
 
 
-\* Ada-Hessian is a robust and efficient optimizer for CSI-based sign language recognition
-
-\* Less sensitive to learning rate selection than first-order methods
-
-\* Weight decay remains an important hyperparameter
-
-\* Demonstrates the practical benefits of second-order information in real-world deep learning tasks
+* Ada-Hessian is a robust and efficient optimizer for CSI-based sign language recognition
+* Less sensitive to learning rate selection than first-order methods
+* Weight decay remains an important hyperparameter
+* Demonstrates the practical benefits of second-order information in real-world deep learning tasks
 
 
 
