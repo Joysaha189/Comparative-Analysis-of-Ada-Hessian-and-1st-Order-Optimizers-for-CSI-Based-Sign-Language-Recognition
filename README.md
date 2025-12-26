@@ -243,7 +243,7 @@ Detailed results for all configurations (learning rates, Hessian power values, w
 
 2\. Zhewei Yao, Amir Gholami, Sheng Shen, Kurt Keutzer, and Michael W. Mahoney. Adahessian: An adaptive second order optimizer for machine learning. AAAI (Accepted), 2021.
 
-3. T. F. Sanam and H. Godrich, "FuseLoc: A CCA Based Information Fusion for Indoor Localization Using CSI Phase and Amplitude of Wifi Signals," ICASSP 2019 - 2019 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), Brighton, UK, 2019, pp. 7565-7569, doi: 10.1109/ICASSP.2019.8683316. 
+3\. T. F. Sanam and H. Godrich, "FuseLoc: A CCA Based Information Fusion for Indoor Localization Using CSI Phase and Amplitude of Wifi Signals," ICASSP 2019 - 2019 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), Brighton, UK, 2019, pp. 7565-7569, doi: 10.1109/ICASSP.2019.8683316. 
 
 
 
