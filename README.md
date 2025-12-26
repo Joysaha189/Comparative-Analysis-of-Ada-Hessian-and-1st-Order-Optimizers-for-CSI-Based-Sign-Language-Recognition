@@ -241,7 +241,7 @@ Detailed results for all configurations (learning rates, Hessian power values, w
 
 
 
-2. Zhewei Yao, Amir Gholami, Sheng Shen, Kurt Keutzer, and Michael W. Mahoney. Adahessian: An adaptive second order optimizer for machine learning. AAAI (Accepted), 2021.
+2\. Zhewei Yao, Amir Gholami, Sheng Shen, Kurt Keutzer, and Michael W. Mahoney. Adahessian: An adaptive second order optimizer for machine learning. AAAI (Accepted), 2021.
 
 
 
