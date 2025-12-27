@@ -31,7 +31,7 @@ First-order optimizers such as SGD and Adam dominate deep learning due to their 
 
 
 
-###### &nbsp;📁 Repository Structure
+###### 📁 Repository Structure
 
 
 
