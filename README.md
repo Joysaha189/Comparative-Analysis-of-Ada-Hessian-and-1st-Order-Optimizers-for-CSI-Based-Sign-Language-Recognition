@@ -71,8 +71,8 @@ First-order optimizers such as SGD and Adam dominate deep learning due to their 
 
 │   └── adahessian\_paper.pdf             # Ada-Hessian original paper
 
-│
-
+│   └── FuseLoc.pdf             # Paper Used for Phase Preprocessing
+ 
 └── README.md
 
 ```
