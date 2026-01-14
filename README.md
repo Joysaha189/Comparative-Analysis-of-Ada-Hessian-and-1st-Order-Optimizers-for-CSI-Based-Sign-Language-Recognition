@@ -123,7 +123,7 @@ Unlike first-order methods, **Ada-Hessian** preconditions gradients using an app
 
 - Batch size: 256  
 - Epochs: up to 300 (Ada-Hessian typically converges within ~50 epochs)  
-- Weight decay: \(5 \times 10^{-4}\)  
+- Weight decay: $\(5 \times 10^{-4}\)$  
 - Learning rate:  
   - First-order optimizers: 0.01  
   - Ada-Hessian: 0.15  
