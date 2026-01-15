@@ -193,7 +193,7 @@ Implementation references:
 
 **Joy Saha**  
 University at Albany, SUNY  
-
+Department of Electrical and Computer Engineering
 ---
 
 ## License
