@@ -193,6 +193,7 @@ Implementation references:
 
 **Joy Saha**  
 Department of Electrical and Computer Engineering
+
 University at Albany, SUNY  
 
 ---
