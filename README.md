@@ -77,9 +77,9 @@ First-order optimizers like **SGD** and **Adam** dominate deep learning due to e
 
 The learning objective is to minimize a non-convex empirical risk function:
 
-\[
+$\
 \min_{\theta} L(\theta) = \frac{1}{N} \sum_{i=1}^{N} \ell(x_i, y_i; \theta)
-\]
+\$
 
 ![adhessian](Images/trajectory.png)
 
